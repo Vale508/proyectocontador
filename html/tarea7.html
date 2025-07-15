@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 7-Reloj Digital</title>
+    <link rel="stylesheet" href="../css/tarea7.css">
+</head>
+<body>
+    <div class="contenedor">
+        <div class="titulo">
+            07-Task
+        </div>
+    <div class="reloj">
+        <span id="horas">00</span>:<span id="minutos">00</span>:<span id="segundos">00</span>
+    </div>
+    <script>
+        function actualizarReloj() {
+            const ahora = new Date();
+            const horas = String(ahora.getHours()).padStart(2, '0');
+            const minutos = String(ahora.getMinutes()).padStart(2, '0');
+            const segundos = String(ahora.getSeconds()).padStart(2, '0');
+            document.getElementById('horas').textContent = horas;
+            document.getElementById('minutos').textContent = minutos;
+            document.getElementById('segundos').textContent = segundos;
+        }
+        setInterval(actualizarReloj, 1000);
+    </script>
+</body>
+</html>

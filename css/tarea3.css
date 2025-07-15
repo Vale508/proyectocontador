@@ -1,0 +1,49 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 150px);
+    grid-template-areas: 
+    "A A A"
+    "B B E"
+    "C D E";
+    gap: 10px;
+    width: 500px;
+    margin: 0 auto;
+   
+}
+.grid-container > div {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    color: #333;
+    
+}
+.item1{
+    grid-area: A;
+}
+.item2{
+    grid-area: B;
+}
+.item3{
+    grid-area: C;
+}
+.item4{
+    grid-area: D;
+}
+.item5{
+    grid-area: E;
+}
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 180px);
+        grid-template-rows: 80px 150px 80px 80px;
+        grid-template-areas: 
+        "A A"
+        "B B"
+        "C D"
+        "E E";
+    }
+}

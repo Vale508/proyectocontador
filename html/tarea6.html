@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 6-Contador</title>
+    <link rel="stylesheet" href="../css/tarea6.css">
+</head>
+<body>
+    <div class="container">
+        <label>
+            <input type="checkbox">
+            <div class="box">10</div>
+        </label>
+        <label>
+            <input type="checkbox">
+            <div class="box">32</div>
+        </label>
+        <label>
+            <input type="checkbox">
+            <div class="box">64</div>
+        </label>
+        <label>
+            <input type="checkbox">
+            <div class="box">-15</div>
+        </label>
+    </div>
+    <div class="suma">
+        Sum: 0
+    </div>
+    <script>
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        const sumDisplay = document.querySelector('.suma');
+
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', () => {
+                let sum = 0;
+                checkboxes.forEach(cb => {
+                    if (cb.checked) {
+                        sum += parseInt(cb.nextElementSibling.textContent);
+                    }
+                });
+                sumDisplay.textContent = `Sum: ${sum}`;
+            });
+        });
+    </script>
+</body>
+</html>

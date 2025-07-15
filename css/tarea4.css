@@ -1,0 +1,45 @@
+body {
+      font-family: Arial, sans-serif;
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 20px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+    }
+    .titulo{
+        text-align: center;
+        color: #c72828;
+        font-size: 24px;
+        font-family: cursive;
+    }
+    .cadena1, .cadena2 {
+        font-size: 20px;
+        text-align: center;
+        font-family: cursive;
+        color: #e68c06;
+    }
+    button {
+      display: block;
+      font-size: 20px;
+      width:100%;
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #df5f5f;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    input {
+        display: block;
+      width: 95%;
+      margin-top: 10px;
+      padding: 10px;
+      font-size: 18px;
+      border: 1px solid #2c2727;
+      border-radius: 5px;
+    }
+    #resultado {
+      margin-top: 20px;
+      font-weight: bold;
+    }
